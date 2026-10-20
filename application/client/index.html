@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardware Store -Login</title>
+</head>
+<body>
+    <h1>Hardware Store Order Management</h1>
+    <h2>System Login</h2>
+    
+    <!--Authentication form-->
+
+    <form action="../server/login.php" method="POST">
+        
+        <div>
+            <label for="usermame">Username:</label>
+            <input type="text" id="username" name="usermame" required>
+        </div>
+        <br>
+        
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <br>
+
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>
