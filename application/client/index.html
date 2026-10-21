@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hardware Store -Login</title>
+    <title>Hardware Store - Home</title>
 </head>
 <body>
-    <h1>Hardware Store Order Management</h1>
-    <h2>System Login</h2>
+   
+    <header>
+        <!--Logo y nombre de la aplicacion-->
+        <h1> 🛠️ Hardware Store Management System</h1>
+    </header>
+
+    <main>
+        <h2>Welcome to the Order Management Portal</h2>
+        <p>Select an option to proceed:</p>
+
+        <!---Botones de acceso a la documentacion y al login-->
+        <a href="docs.html">
+            <button type="button">Application Documentation</button>
+        </a>
+        <br><br>
+
+        <a href="login.html">
+            <button type="button">Login Section</button>
+        </a>
+    </main>
     
-    <!--Authentication form-->
-
-    <form action="../server/login.php" method="POST">
-        
-        <div>
-            <label for="usermame">Username:</label>
-            <input type="text" id="username" name="usermame" required>
-        </div>
-        <br>
-        
-        <div>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-        </div>
-        <br>
-
-        <button type="submit">Login</button>
-    </form>
 </body>
 </html>
