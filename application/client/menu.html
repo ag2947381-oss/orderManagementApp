@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardware Store - Operations Menu</title>
+</head>
+<body>
+    <header>
+        <h1>🛠️ Hardware Store - Operations Menu</h1>
+        <h2>>Select an Operation</h2>
+    </header>
+
+    <main>
+        <form id="operationsForm">
+            <div>
+                <label for="operationsSelect">Choose an option</label>
+                <select id="operationsSelect" name="operation" required>
+                    <option value="create">Create a New Order</option>
+                    <option value="view">View Orders</option>
+                </select>>
+                    
+                </select>
+            </div>
+            <br>
+
+            <button type="button" onclick="navigateToOperation()">Go to Selectd Operation</button>
+        </form>
+        <br>
+        <nav>
+            <a href="index.html">
+                <button type="button">Back to Home</button>
+            </a>
+        </nav>
+    </main>
+
+    <script>
+        function navigateToOperation(){
+            const selectedOption =  document.getElementById('oprerationSelect').value;
+
+            if(selectedOption === 'create') {
+                window.location.href = 'create_order.html'
+            } else if (selectedOption === 'view') {
+                window.location.href = 'view_menu.html';
+            }
+        }
+    </script>
+    
+</body>
+</html>
