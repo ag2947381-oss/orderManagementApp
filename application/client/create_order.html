@@ -12,7 +12,7 @@
     </header>
 
     <main>
-
+        <!-- Formulario: usa el método POST para enviar datos al servidor (Requisito de diseño 7) -->
         <form action="../server/create_order.php" method="POST">
             <fieldset>
                 <legend>Customer Information</legend>
@@ -32,13 +32,15 @@
                 </div>
                 <br>
                 <div>
+                    <!-- Mejora: type="email" valida automáticamente que haya un @ -->
                     <label for="email">Email Address</label>
-                    <input type="text" id="email" name="email" required>
+                    <input type="email" id="email" name="email" required>
                 </div>
                 <br>
                 <div>
+                    <!-- Mejora: type="tel" es ideal para números de teléfono -->
                     <label for="phone">Phone Number</label>
-                    <input type="text" id="phone" name="phone" required>
+                    <input type="tel" id="phone" name="phone" required>
                 </div>
             </fieldset>
 
@@ -46,44 +48,55 @@
             <fieldset>
                 <legend>Hardware Products Selection</legend>
 
+                <!-- Producto 1: Martillo -->
                 <div>
-                    <input type="checkbox" id="item1_check" name="products[hammer][active]"> 
-                    <label for="item1_check">Hammer - $15.00 </label>
+                    <!-- value="1" indica que si se marca, se envía un 1 al servidor -->
+                    <input type="checkbox" id="item1_check" name="products[hammer][active]" value="1"> 
+                    <label for="item1_check">Hammer - 15.00€ </label>
                     <label for="item1_quantity">Quantity: </label>
-                    <input type="number" id="item1_quantity" name="products[hammer][active]" min="1" value="1">
+                    <!-- CORRECCIÓN: name cambiado a [quantity] -->
+                    <input type="number" id="item1_quantity" name="products[hammer][quantity]" min="1" value="1">
                 </div>
                 <br>
 
+                <!-- Producto 2: Taladro -->
                 <div>
                     <input type="checkbox" id="item2_check" name="products[drill][active]" value="1">
-                    <label for="item2_check">Drill - $85.00</label>
+                    <label for="item2_check">Drill - 85.00€</label>
                     <label for="item2_quantity">Quantity:</label>
-                    <input type="number" id="item2_quantity" name="products[drill][active]" min="1" value="1">
+                    <!-- CORRECCIÓN: name cambiado a [quantity] -->
+                    <input type="number" id="item2_quantity" name="products[drill][quantity]" min="1" value="1">
                 </div>
                 <br>
 
+                <!-- Producto 3: Caja de tornillos -->
                 <div>
                     <input type="checkbox" id="item3_check" name="products[screws][active]" value="1">
-                    <label for="item3_check">Screws Box - $8.00</label>
+                    <label for="item3_check">Screws Box - 8.00€</label>
                     <label for="item3_quantity">Quantity:</label>
-                    <input type="number" id="item3_quantity" name="products[screws][active]" min="1" value="1">
+                    <!-- CORRECCIÓN: name cambiado a [quantity] -->
+                    <input type="number" id="item3_quantity" name="products[screws][quantity]" min="1" value="1">
                 </div>
-
                 <br>
+                
+                <!-- Producto 4: Paquete de clavos -->
                 <div>
                     <input type="checkbox" id="item4_check" name="products[nails][active]" value="1">
-                    <label for="item4_check">Nails Pack - $3.50</label>
+                    <label for="item4_check">Nails Pack - 3.50€</label>
                     <label for="item4_quantity">Quantity:</label>
-                    <input type="number" id="item4_quantity" name="products[nails][active]" min="1" value="1">
+                    <!-- CORRECCIÓN: name cambiado a [quantity] -->
+                    <input type="number" id="item4_quantity" name="products[nails][quantity]" min="1" value="1">
                 </div>
             </fieldset>
             <br>
 
+            <!-- Botón de envío que dispara el action del form -->
             <button type="submit">Calculate and Submit Order</button>
         </form>
 
         <br>
-
+        
+        <!-- Botones de navegación exigidos por la rúbrica -->
         <nav>
             <a href="menu.html">
                 <button type="button">Back to Operations Menu</button>
