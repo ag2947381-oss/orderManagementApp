@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haedware Store . View Orders Menu</title>
+</head>
+<body>
+    <header>
+        <h1>🛠️ Hardware Store Management System</h1>
+        <h2>View Orders Options Menu</h2>
+    </header>
+
+    <main>
+
+        <form id="viewMenuForm">
+            <div>
+                <label for="viewSelect">Choose a display option: </label>
+                <select id="viewSelect name=viewOption" required>
+                    <option value="all">View all orders</option>
+                    <option value="single">View a specific order by ID</option>
+                </select>
+            </div>
+        </form>
+        <br>
+
+        <nav>
+            <a href="menu.html">
+            <button type="button">Back to Operations Menu</button>
+            </a>
+            <a href="index.html">
+                <button type="button">Back to Home</button>
+            </a>
+        </nav>
+    </main>
+    
+    <script>
+        function navigateToViewOption() {
+
+            const selectedOption = document.getElementById('viewSelect').value;
+
+
+            if (selectedOption === 'all') {
+                window.location.href = '../server/view_all_orders-php';
+
+            } else if (selectedOption === 'single') {
+                window.location.href = 'view_order.html';
+            }
+        }
+    </script>
+</body>
+</html>
